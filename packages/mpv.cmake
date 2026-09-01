@@ -4,26 +4,16 @@ ExternalProject_Add(mpv
         ffmpeg
         fribidi
         lcms2
-        libarchive
         libass
-        libdvdnav
-        libdvdread
         libiconv
         libjpeg
         libpng
-        luajit
-        rubberband
         uchardet
-        openal-soft
-        mujs
         vulkan
         shaderc
         libplacebo
         spirv-cross
-        vapoursynth
-        libsdl2
         subrandr
-        libsixel
         curl
     GIT_REPOSITORY https://github.com/mpv-player/mpv.git
     SOURCE_DIR ${SOURCE_LOCATION}
@@ -40,23 +30,25 @@ ExternalProject_Add(mpv
         -Doptimization=3
         -Db_lto=true
         ${mpv_lto_mode}
+        -Dgpl=false
         -Dlibmpv=true
+        -Dcplayer=false
         -Dpdf-build=enabled
-        -Dlua=enabled
-        -Djavascript=enabled
-        -Dsdl2-gamepad=enabled
-        -Dlibarchive=enabled
-        -Dlibbluray=enabled
-        -Ddvdnav=enabled
+        -Dlua=disabled
+        -Djavascript=disabled
+        -Dsdl2-gamepad=disabled
+        -Dlibarchive=disabled
+        -Dlibbluray=disabled
+        -Ddvdnav=disabled
         -Duchardet=enabled
-        -Drubberband=enabled
+        -Drubberband=disabled
         -Dlcms2=enabled
-        -Dopenal=enabled
+        -Dopenal=disabled
         -Dspirv-cross=enabled
         -Dvulkan=enabled
-        -Dvapoursynth=enabled
+        -Dvapoursynth=disabled
         -Dsubrandr=enabled
-        -Dsixel=enabled
+        -Dsixel=disabled
         ${mpv_gl}
         -Dlibcurl=enabled
         -Dc_args='-Wno-error=int-conversion'
