@@ -25,8 +25,6 @@ ExternalProject_Add(ffmpeg
         libzvbi
         libaribcaption
         dav1d
-        ${ffmpeg_uavs3d}
-        ${ffmpeg_davs2}
         libva
     GIT_REPOSITORY https://github.com/FFmpeg/FFmpeg.git
     SOURCE_DIR ${SOURCE_LOCATION}
@@ -55,8 +53,6 @@ ExternalProject_Add(ffmpeg
         --enable-libvpx
         --enable-libwebp
         --enable-libdav1d
-        ${ffmpeg_davs2_cmd}
-        ${ffmpeg_uavs3d_cmd}
         --enable-libzimg
         --enable-openssl
         --enable-libxml2
