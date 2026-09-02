@@ -70,7 +70,6 @@ ExternalProject_Add(ffmpeg
         --enable-nvdec
         --enable-nvenc
         --enable-amf
-        --enable-openal
         --enable-opengl
         --disable-doc
         --disable-ffplay
