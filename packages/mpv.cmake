@@ -13,7 +13,6 @@ ExternalProject_Add(mpv
         shaderc
         libplacebo
         spirv-cross
-        subrandr
         curl
     GIT_REPOSITORY https://github.com/mpv-player/mpv.git
     SOURCE_DIR ${SOURCE_LOCATION}
@@ -47,7 +46,7 @@ ExternalProject_Add(mpv
         -Dspirv-cross=enabled
         -Dvulkan=enabled
         -Dvapoursynth=disabled
-        -Dsubrandr=enabled
+        -Dsubrandr=disabled
         -Dsixel=disabled
         ${mpv_gl}
         -Dlibcurl=enabled
