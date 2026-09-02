@@ -20,7 +20,6 @@ ExternalProject_Add(ffmpeg
         speex
         vorbis
         libxml2
-        libvpl
         libjxl
         libplacebo
         libzvbi
@@ -62,7 +61,6 @@ ExternalProject_Add(ffmpeg
         --enable-openssl
         --enable-libxml2
         --enable-libsrt
-        --enable-libvpl
         --enable-libjxl
         --enable-libplacebo
         --enable-libzvbi
