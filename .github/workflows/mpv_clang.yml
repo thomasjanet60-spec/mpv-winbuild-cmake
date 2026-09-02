@@ -139,17 +139,11 @@ jobs:
           path: logs.7z
           retention-days: 1
 
-      - name: Uploading ${{ matrix.bit }} build
+      - name: Uploading ${{ matrix.bit }} build (mpv-dev, seul paquet produit -- cplayer=false)
         uses: actions/upload-artifact@master
         with:
           name: mpv-${{ matrix.bit }}
-          path: release_${{ matrix.bit }}/mpv-${{ env.arch }}*
-
-      - name: Uploading ${{ matrix.bit }} debug
-        uses: actions/upload-artifact@master
-        with:
-          name: mpv-${{ matrix.bit }}-debug
-          path: release_${{ matrix.bit }}/mpv-debug-${{ env.arch }}*
+          path: release_${{ matrix.bit }}/mpv-dev-${{ env.arch }}*
 
       - name: Cleaning build directory
         if: always()
